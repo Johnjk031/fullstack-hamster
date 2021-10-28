@@ -9,7 +9,7 @@ const getAllScript = require('./src/scripts/getAllData')
 
 const PORT = process.env.PORT || 1337
 
-
+console.log('test')
 
 app.use(cors())
 app.use( express.urlencoded({ extended: true }) )
