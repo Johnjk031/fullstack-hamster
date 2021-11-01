@@ -6,11 +6,10 @@ import {Hamster} from '../../models/Models'
 const HamsterList = () => {
 
 const [data, setData] = useState<Hamster[] | null>(null)
-const baseUrl = 'http://localhost:1337'
 
 
 useEffect(() => {
-    axios.get(baseUrl + '/hamsters')
+    axios.get('/hamsters/cutest')
     .then(res => {
       setData(res.data)
     })
@@ -24,10 +23,21 @@ console.log(data)
 
 return(
 <section>
- 
+{data ? 
+data.map(hamster => (
+ <section key={hamster.name}>
+   <p>{hamster.name}</p>
+   <img src={hamster.imgName} alt={hamster.name} />
+ </section> 
+))
+:
+<p>loading..</p>
+}
 </section>
 )
 }
+
+
 /*
 async function getHamsters(saveData: any) {
   const baseUrl = 'http://localhost:1337'
