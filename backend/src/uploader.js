@@ -1,8 +1,8 @@
 var admin = require("firebase-admin");
 
 let serviceAccount;
-if (process.env.FIREBASEKEY) {
-	serviceAccount = JSON.parse(process.env.FIREBASEKEY)
+if (process.env.KEY) {
+	serviceAccount = JSON.parse(process.env.KEY)
 }
 else {
 	serviceAccount = require("./secrets/server-key.json");
