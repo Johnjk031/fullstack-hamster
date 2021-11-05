@@ -20,8 +20,9 @@ app.use((req, res, next) => {
 	next()
 })
 
+console.log(__dirname)
+app.use('/img/', express.static(__dirname + '/hamsters'))
 app.use( express.static(__dirname + '/../build') )
-
 
 app.get('/', (req, res) => {
 	res.send('hello world from john')
@@ -51,6 +52,9 @@ app.get('/winners', async (req, res) => {
 app.use('/hamsters', hamsterRouter)
 app.use('/matches', matchRouter)
 
+app.get('*', (req, res) => {
+	res.sendFile(__dirname + '/build/index.html')
+})
 
 app.listen(PORT, () => {
 	console.log(`Server listening on localhost:${PORT}.`);

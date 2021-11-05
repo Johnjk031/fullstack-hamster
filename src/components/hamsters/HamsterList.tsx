@@ -5,7 +5,7 @@ import {Hamster} from '../../models/Models'
 
 const HamsterList = () => {
 
-const [data, setData] = useState<Hamster[] | null>(null)
+  const [data, setData] = useState<Hamster[] | null>(null)
 
 
 useEffect(() => {
@@ -27,7 +27,7 @@ return(
 data.map(hamster => (
  <section key={hamster.name}>
    <p>{hamster.name}</p>
-   <img src={hamster.imgName} alt={hamster.name} />
+   <img src={'/img/' + hamster.imgName} alt={hamster.name} width="300px" height="300px" />
  </section> 
 ))
 :
