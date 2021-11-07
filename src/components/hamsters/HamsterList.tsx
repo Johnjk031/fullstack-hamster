@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-
 import {Hamster} from '../../models/Models'
 
 const HamsterList = () => {
@@ -37,13 +36,4 @@ data.map(hamster => (
 )
 }
 
-
-/*
-async function getHamsters(saveData: any) {
-  const baseUrl = 'http://localhost:1337'
-  const response = await fetch(baseUrl + '/hamsters')
-  const data = await response.json
-  saveData(data)
-}
-*/
 export default HamsterList

@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import {useState, useEffect} from 'react'
+import {Hamster} from './models/Models'
+import axios from 'axios'
 
 
 import HamsterList from './components/hamsters/HamsterList';
@@ -9,12 +12,26 @@ import Gallery from './components/gallery/gallery';
 import Statistic from './components/statistic/Statistic';
 import History from './components/history/History';
 import BadUrl from './components/BadUrl';
+import Fullinfo from './components/gallery/Fullinfo'
 
 
 
 function App() {
 
+  const [data, setData] = useState<Hamster[] | []>([])
 
+  useEffect(() => {
+    axios.get('/hamsters')
+    .then(res => {
+      setData(res.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+,[])
+
+console.log(data)
   return (
     <div className="App">
       <header>
@@ -41,7 +58,7 @@ function App() {
 </Route>
 
 <Route path="/galleri" exact>
-  <Gallery />
+  <Gallery data={data} setData={setData} />
 </Route>
 
 <Route path="/statistik" exact>
@@ -52,8 +69,12 @@ function App() {
  <History />
 </Route>
 
+<Route path="/info/:id" exact>
+<Fullinfo data={data} />
+</Route>
+
 <Route path="/">
-  <BadUrl />
+<BadUrl />
 </Route>
 
   </Switch>
