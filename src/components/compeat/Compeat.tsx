@@ -23,9 +23,6 @@ const Compeat = () => {
     }
   ,[])
 
-
-
-
   if (firstHamster === secondHamster) {
     console.log('they are the same')
     axios.get('/hamsters/random')
@@ -36,13 +33,7 @@ const Compeat = () => {
      console.log(firstHamster)
      console.log(secondHamster)
 }
-
-
 const compeatArray = [firstHamster, secondHamster]
-
-
-
-console.log(compeatArray)
 
 return(
     <section>
