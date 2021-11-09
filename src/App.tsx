@@ -3,7 +3,7 @@ import './App.css';
 import {useState, useEffect} from 'react'
 import {Hamster} from './models/Models'
 import axios from 'axios'
-
+import { useStateIfMounted} from 'use-state-if-mounted'
 
 import HamsterList from './components/hamsters/HamsterList';
 import { Link, Switch, Route } from 'react-router-dom'

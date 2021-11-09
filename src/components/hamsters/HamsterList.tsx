@@ -18,12 +18,24 @@ useEffect(() => {
   }
 ,[])
 
-console.log(data)
+
+let a, b
+let dataArray: any = []
+let newArray;
+
+if (data) {
+  [a, b] = data
+newArray = [...dataArray, a]
+}
+
+
+
+console.log(a)
 
 return(
 <section>
-{data ? 
-data.map(hamster => (
+{newArray ? 
+newArray.map((hamster: any) => (
  <section key={hamster.name}>
    <p>{hamster.name}</p>
    <img src={'/img/' + hamster.imgName} alt={hamster.name} width="300px" height="300px" />

@@ -61,18 +61,20 @@ console.log(data)
   }
 
     let randomMath = Math.random()
+    console.log(data.data)
+
 
     return (
-     
         
         <section>
 
        <p>Gallery component</p>
                  {data ?
                 data.data.map((hamster: any) => (
-
+                
                     <section key={hamster.id + randomMath}>
                         <p>{hamster.name}</p>
+                        
 
                        {hamster.imgName.startsWith('https:') || hamster.imgName.startsWith('data:')
                             ?
