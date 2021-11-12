@@ -3,7 +3,6 @@ import './App.css';
 import {useState, useEffect} from 'react'
 import {Hamster} from './models/Models'
 import axios from 'axios'
-import { useStateIfMounted} from 'use-state-if-mounted'
 
 import HamsterList from './components/hamsters/HamsterList';
 import { Link, Switch, Route } from 'react-router-dom'
@@ -31,19 +30,22 @@ function App() {
   }
 ,[])
 
-console.log(data)
+ 
+
   return (
     <div className="App">
       <header>
+        <h1>HAMSTER WARS</h1>
+        
+<article className="head-class">
 <nav>
-
-  
 <Link to="/">Start</Link>
   <Link to="/tavla">Tävla</Link>
   <Link to="/galleri">Galleri</Link>
   <Link to="/statistik">Statistik</Link>
   <Link to="/historik">Historik</Link>
 </nav>
+</article>
       </header>
      
 <main>
@@ -58,7 +60,7 @@ console.log(data)
 </Route>
 
 <Route path="/galleri" exact>
-  <Gallery data={data} setData={setData} />
+  <Gallery data={data} setData={setData}/>   
 </Route>
 
 <Route path="/statistik" exact>
@@ -70,7 +72,7 @@ console.log(data)
 </Route>
 
 <Route path="/info/:id" exact>
-<Fullinfo data={data} />
+<Fullinfo data={data} />  
 </Route>
 
 <Route path="/">

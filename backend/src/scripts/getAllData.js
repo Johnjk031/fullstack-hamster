@@ -60,15 +60,17 @@ async function getCutest() {
 	await dataSnapshot.forEach(async docRef => {
 		const data = await docRef.data()
 		data.id = docRef.id
-		array.push(data)
+	    array.push(data)
 	})
 	
-	const amounts = array.map((a) => a.wins)
-const highestAmount = Math.max(...amounts);
+	const amounts = array.map((a) => a.wins - a.defeats)
+	const maxed = Math.max(...amounts)
+   console.log(maxed)
 
-const cutest = array.filter(arr => arr.wins - arr.defeats === highestAmount)
+   const cutest = array.filter(arr => arr.wins - arr.defeats === maxed)
 
-	return cutest
+   return cutest
+
 }
 
 

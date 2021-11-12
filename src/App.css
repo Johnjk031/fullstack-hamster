@@ -1,6 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
+  letter-spacing: 0.15em;
+
+}
+header {
+  background-color: rgb(160, 151, 151);
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.15em;
+  color: rgb(71, 68, 68);
+  width: 100vw;
 }
 header a {
   margin: 0em 0.7em;
+  text-decoration: none;
+  color: rgb(71, 68, 68);
+  letter-spacing: 0.15em;
+}
+header a:hover {
+color: white;
+}
+.head-class {
+  background-color: rgb(209, 203, 203);
+  padding: 0.3rem;
+  width: 100vw;
 }

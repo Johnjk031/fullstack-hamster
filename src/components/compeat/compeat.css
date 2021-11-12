@@ -1,0 +1,28 @@
+.hide {
+    display: none;
+}
+.cmp-img {
+    width: 30vw;
+    height: 30vh;
+}
+.compeat-img-section {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.comp-text {
+ color: black;
+}
+.remove {
+    background-color: rgb(160, 151, 151);
+    width: 17vh;
+    height: 5vh;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+.flex-info {
+    display: flex;
+    flex-direction: column;
+}

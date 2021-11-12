@@ -36,7 +36,7 @@ router.get('/matchWinners/:id', async (req, res) => {
     let id = req.params.id
 	let array = await getAllScript.getOneMatchWinner(id)
 	if (array.length <= 0) {
-		res.sendStatus(404)
+		res.status(404).send([])
 	} 
 	else {
 		res.status(200).send(array)

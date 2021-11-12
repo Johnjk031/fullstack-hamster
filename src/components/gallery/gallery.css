@@ -1,0 +1,87 @@
+
+.img-class {
+    width: 30vw;
+    height: 30vh;
+    border:  solid white;
+}
+.grid {
+    display: grid;
+    
+    grid-template-columns: 32% 32%;
+    justify-content: center;
+}
+.remove {
+    background-color: rgb(160, 151, 151);
+    width: 17vh;
+    height: 5vh;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: white;
+    border-radius: 10px;
+}
+.add-btn {
+    background-color: rgb(160, 151, 151);
+    width: 23vh;
+    height: 5vh;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: white;
+    border-radius: 10px;
+}
+
+.unv-btn {
+    background-color: rgb(160, 151, 151);
+    width: 23vh;
+    height: 5vh;
+    opacity: 0.4;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: white;
+    border-radius: 10px;
+}
+.quit-btn {
+    position: relative;
+    top: 0.5rem
+  
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 232, 236);
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 10rem;
+}
+input {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid
+}
+.flex-art {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-text {
+    margin-top: 3rem;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.valid {
+  border-color: rgb(16, 114, 16);
+}
+.invalid {
+ border-color: rgb(243, 53, 53);
+}

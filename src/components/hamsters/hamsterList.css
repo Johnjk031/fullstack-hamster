@@ -1,0 +1,12 @@
+.reload-art {
+    margin-top: 6rem;
+}
+.reload-btn {
+    background-color: rgb(160, 151, 151);
+    width: 23vh;
+    height: 5vh;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    color: white;
+    border-radius: 10px;
+}
